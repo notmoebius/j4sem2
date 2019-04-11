@@ -29,8 +29,6 @@ def get_congress_urls
     congress_names.each do |congress|
 
         url_congress = "http://www2.assemblee-nationale.fr#{congress}"
-        #ary_result << url_congress
-        #puts get_congres_email(url_congress)
         ary_result.push(get_congres_email(url_congress))
     end
     return ary_result
