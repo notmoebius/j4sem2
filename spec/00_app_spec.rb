@@ -8,4 +8,3 @@ describe "crypto_scraper return array of hash" do
       expect(crypto_scrapper).to be_truthy
     end
 end
-
