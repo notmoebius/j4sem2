@@ -14,8 +14,8 @@ blabla
 
 Blagues: https://lesjoiesducode.fr/quand-je-viens-de-livrer-une-nouvelle-version-et-que-tous-les-clients-ouvrent-des-tickets-support
 
-Attention !!
+!! Attention !!
 les programmes sont très longs à s'éxécuter.
-- 00_app dure : 
-- 02_app dure : 
-- 03_app dure : 14 minutes
+- 00_app dure : plus de 20 min
+- 02_app dure : < à 30 sec
+- 03_app dure : 15 à 20 minutes
