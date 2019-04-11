@@ -21,4 +21,4 @@ Blagues: https://lesjoiesducode.fr/quand-je-viens-de-livrer-une-nouvelle-version
 les programmes sont très longs à s'éxécuter (et les tests aussi bien sûr).
 - 00_app dure : plus de 20 min
 - 02_app dure : < à 30 sec  (rspec ok chez nous)
-- 03_app dure : 15 à 20 minutes
+- 03_app dure : 15 à 20 minutes (rspec ok chez nous)
