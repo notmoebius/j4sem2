@@ -36,7 +36,5 @@ def get_congress_urls
     return ary_result
 end
 
-
-# lien: http://www2.assemblee-nationale.fr/deputes/liste/tableau
-#puts get_congres_email("http://www2.assemblee-nationale.fr/deputes/liste/alphabetique")
+# main
 puts get_congress_urls
