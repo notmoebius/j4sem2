@@ -1,4 +1,4 @@
-require "../lib/03_app"
+require_relative "../lib/03_app"
 
 describe "scrap get_deputy_email" do 
     it "should return something MDR" do

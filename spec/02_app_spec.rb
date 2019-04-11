@@ -1,4 +1,4 @@
-require "../lib/02_app"
+require_relative "../lib/02_app"
 
 describe "scrap get_townhall should return something" do
     it "should return something lol" do

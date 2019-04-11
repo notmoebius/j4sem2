@@ -1,4 +1,4 @@
-require "../lib/00_app"
+require_relative  "../lib/00_app"
 
 describe "crypto_scraper return array of hash" do
     it "should return array, and array is not nil" do
