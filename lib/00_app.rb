@@ -21,9 +21,8 @@ def crypto_scrapper
     count_crypto +=1
     crypto_names << crypto_name # je mets mon hash crypto/prix dans mon tableau
   end
-  #binding.pry
-  #puts crypto_names
-  return # un tableau de hash avec symbol: price
+
+  return crypto_name # un tableau de hash avec symbol: price
 end
 
 crypto_scrapper
