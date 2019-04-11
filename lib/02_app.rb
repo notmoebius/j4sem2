@@ -27,5 +27,4 @@ def get_townhall_urls
     return ary_result
 end
 
-get_townhall_email("http://annuaire-des-mairies.com/95/ableiges.html")
 puts get_townhall_urls
