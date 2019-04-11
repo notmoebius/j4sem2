@@ -8,23 +8,23 @@ require 'pry'
 
 def crypto_scrapper
   page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))   # je charge la page dans nokogiri
-  crypto_listings = page.css('.bottom-margin-1x > div:nth-child(3)') # je filtre en prenant uniquement de tableau des monnaies
-  
-  crypto_listings.each do | bitcoin |  # Pour chaque item du listing, j'extrait le nom et 
-    # crypto_names {
-    #   name: page.css('#id-birds > td:nth-child(3)').text}
-    #    price: page.css('#id-birds > td:nth-child(5)').text
-    # }
-    print bitcoin.css('td:nth-child(3)').text
-    puts bitcoin.css('td:nth-child(5)').text
-    #binding.pry
+  crypto_listings = page.xpath('//table//tbody/tr') # je filtre en prenant uniquement de tableau des monnaies
+  crypto_names = Array.new
+  count_crypto = 0   # compteur du tableau bitcoin
+  crypto_listings.each do |bitcoin|  # Pour chaque item du listing, j'extrait le nom et 
+    crypto_name = {
+      name: bitcoin.xpath('//*[@class="text-left col-symbol"]')[count_crypto].text,  # #id-bitcoin > td:nth-child(3)
+      price: bitcoin.xpath('//*[@class="price"]')[count_crypto].text # #id-bitcoin > td:nth-child(5) > a:nth-child(1)
+    }
+    # puts bitcoin.xpath('//*[@class="text-left col-symbol"]')[count_crypto].text #xpath bitcoin.xpath('//*[@class="text-left col-symbol"]').text
+    # puts bitcoin.xpath('//*[@class="price"]')[count_crypto].text #xpath bitcoin.xpath('//*[@class="price"]').text 
+    count_crypto +=1
+    crypto_names << crypto_name # je mets mon hash crypto/prix dans mon tableau
   end
-  binding.pry
+  #binding.pry
+  #puts crypto_names
   return # un tableau de hash avec symbol: price
 end
 
-# css symbol: #id-birds > td:nth-child(3)
-# css price: #id-birds > td:nth-child(5)
-# xpath symbol: /html/body/div[2]/div/div[1]/div[2]/div[3]/div[2]/div/table/tbody/tr[2093]/td[3]
-# xpath price :
 crypto_scrapper
+
